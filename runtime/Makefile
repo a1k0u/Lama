@@ -1,11 +1,7 @@
 UNAME_S := $(shell uname -s)
 
-ifeq ($(UNAME_S),Linux)
-    CC=gcc
-else ifeq ($(UNAME_S),Darwin)
-    CC=clang
-    ARCH = -arch x86_64
-endif
+CC=clang
+ARCH = -arch x86_64
 
 DISABLE_WARNINGS=-Wno-shift-negative-value
 COMMON_FLAGS=$(DISABLE_WARNINGS) -g -fstack-protector-all $(ARCH) --std=c11
