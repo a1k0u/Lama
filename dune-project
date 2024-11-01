@@ -1,6 +1,6 @@
 (lang dune 3.3)
 
-(name name1)
+(name Lama)
 
 (cram enable)
 
